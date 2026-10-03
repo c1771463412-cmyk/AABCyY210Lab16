@@ -10,6 +10,27 @@ class Color {
         int blue;
 
     public:
+        // Default constructor
+        Color() {
+            red = 0;
+            green = 0;
+            blue = 0;
+        }
+
+        // Partial constructor
+        Color(int r) {
+            red = r;
+            green = 0;
+            blue = 0;
+        }
+
+        // Parameter constructor
+        Color(int r, int g, int b) {
+            red = r;
+            green = g;
+            blue = b;
+        }
+
         // getRed() gets the red value
         // arguments: none
         // returns: the red value
@@ -63,23 +84,10 @@ class Color {
 };
 
 int main() {
-    // Create three Color objects
+    // Create Color objects using different constructors
     Color color1;
-    Color color2;
-    Color color3;
-
-    // Set the RGB values for each color
-    color1.setRed(255);
-    color1.setGreen(0);
-    color1.setBlue(0);
-
-    color2.setRed(0);
-    color2.setGreen(255);
-    color2.setBlue(0);
-
-    color3.setRed(0);
-    color3.setGreen(0);
-    color3.setBlue(255);
+    Color color2(255);
+    Color color3(0, 0, 255);
 
     // Display each Color object's data
     color1.print();
